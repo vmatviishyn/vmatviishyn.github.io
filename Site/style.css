@@ -1,0 +1,13 @@
+body{
+	height: 200px;
+}
+.p-0{
+	padding: 0;
+
+}
+.p-1{
+	padding: 10px;
+}
+hr{
+	width:80%;
+}
