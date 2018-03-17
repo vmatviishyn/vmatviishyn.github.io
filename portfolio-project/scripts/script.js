@@ -38,7 +38,7 @@ $(function() {
         // typing speed
         typeSpeed: 20,
         // time before typing starts
-        startDelay: 1200,
+        startDelay: 1000,
         // backspacing speed
         backSpeed: 20,
         // time before backspacing
@@ -46,7 +46,7 @@ $(function() {
         // loop
         loop: true,
         // false = infinite
-        loopCount: 5,
+        loopCount: 10,
         // show cursor
         showCursor: false,
         // character for cursor
@@ -67,8 +67,6 @@ $(function() {
 });
 
 // modal
-
-
 function createModal(object) {
     var root = document.getElementById("modals");
     root.innerHTML = "";
@@ -174,3 +172,14 @@ function createModal(object) {
     // return modal;
     root.appendChild(modal);
 }
+// end modal
+
+//lightbox
+$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox({
+        showArrows: true,
+
+    });
+});
+//end lightbox

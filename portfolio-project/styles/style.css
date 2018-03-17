@@ -1,5 +1,6 @@
 body {
     background-color: #F8F9FA;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 #header,
@@ -178,4 +179,33 @@ h3 {
 
 .myClose {
     -webkit-appearance: none !important;
+}
+
+.social {
+    font-size: 50px;
+    cursor: pointer;
+}
+
+#contact a {
+    text-decoration: none;
+    transition: 1s;
+}
+
+#contact a:hover {
+    color: #eeae26;
+}
+
+.social-item {
+    margin-left: 20px;
+}
+
+.footer {
+    margin-top: 30px;
+    background-color: #F8F9FA;
+    color: grey;
+}
+
+.footer-text {
+    padding: 10px 0 10px 20px;
+    font-weight: bold;
 }
