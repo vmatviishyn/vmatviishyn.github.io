@@ -175,3 +175,7 @@ h3 {
 .myCard {
     margin-bottom: 20px;
 }
+
+.myClose {
+    -webkit-appearance: none !important;
+}

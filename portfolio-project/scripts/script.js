@@ -29,6 +29,7 @@ $btnTop.on("click", function() {
     $("html, body").animate({ scrollTop: 0 }, 900)
 });
 
+// typed
 $(function() {
     $(".typed").typed({
         strings: ["Developer", "Starting Front-end developer."],
@@ -64,3 +65,112 @@ $(function() {
         resetCallback: function() {}
     });
 });
+
+// modal
+
+
+function createModal(object) {
+    var root = document.getElementById("modals");
+    root.innerHTML = "";
+    for (var i in works) {
+        for (var keys in works[i]) {
+            if (works[i].title === object) {
+                var obj = works[i];
+                break;
+            }
+        }
+    }
+    var modal = document.createElement("div");
+    modal.classList.add("modal", "fade", "bd-example-modal-lg");
+    modal.id = "exampleModal";
+    modal.setAttribute("tabindex", "-1");
+    modal.setAttribute("role", "dialog");
+    modal.setAttribute("aria-labelledby", "exampleModalLabel");
+    modal.setAttribute("aria-hidden", "true");
+    // =================
+    var modalDialog = document.createElement("div");
+    modalDialog.classList.add("modal-dialog", "modal-lg");
+    modalDialog.setAttribute("role", "document");
+    // =================
+    var modalContent = document.createElement("div");
+    modalContent.className = "modal-content";
+    // =================
+    var modalHeader = document.createElement("div");
+    modalHeader.className = "modal-header";
+    // =================
+    var modalTitle = document.createElement("h5");
+    modalTitle.className = "modal-title";
+    modalTitle.id = "exampleModalLabel";
+    modalTitle.innerHTML = obj.title;
+    // =================
+    var closeButton = document.createElement("div");
+    closeButton.setAttribute("type", "button");
+    closeButton.setAttribute("data-dismiss", "modal");
+    closeButton.setAttribute("aria-label", "Close");
+    closeButton.classList.add("close", "myClose");
+    // =================
+    var span = document.createElement("span");
+    span.setAttribute("aria-hidden", "true");
+    span.innerHTML = "&times;";
+    // =================
+    closeButton.appendChild(span);
+    // =================
+    modalHeader.appendChild(modalTitle);
+    modalHeader.appendChild(closeButton);
+    // =================
+    var modalBody = document.createElement("div");
+    modalBody.className = "modal-body";
+    // =================
+    var container = document.createElement("div");
+    container.className = "container";
+    // =================
+    var photo = document.createElement("div");
+    photo.className = "photo";
+    // =================
+    var img = document.createElement("img");
+    img.className = "img-fluid";
+    img.setAttribute("src", obj.fullImg);
+    img.setAttribute("alt", "Full image");
+    // =================
+    photo.appendChild(img);
+    // =================
+    var description = document.createElement("div");
+    description.className = "description";
+    // =================
+    var descriptionHeader = document.createElement("h6");
+    descriptionHeader.innerHTML = "Used:";
+    // =================
+    var list = document.createElement("ul");
+    for (var key in obj.details) {
+        var listItem = document.createElement("li");
+        listItem.innerHTML = obj.details[key];
+        list.appendChild(listItem);
+    }
+    description.appendChild(descriptionHeader);
+    description.appendChild(list);
+    // =================
+    container.appendChild(photo);
+    container.appendChild(description);
+    // =================
+    modalBody.appendChild(container);
+    // =================
+    var modalFooter = document.createElement("div");
+    modalFooter.className = "modal-footer";
+    // =================
+    var button = document.createElement("button");
+    button.setAttribute("type", "button");
+    button.setAttribute("data-dismiss", "modal");
+    button.classList.add("btn", "btn-danger");
+    button.innerHTML = "Close";
+    // =================
+    modalFooter.appendChild(button);
+    // =================
+    modalContent.appendChild(modalHeader);
+    modalContent.appendChild(modalBody);
+    modalContent.appendChild(modalFooter);
+    // =================
+    modalDialog.appendChild(modalContent);
+    modal.appendChild(modalDialog);
+    // return modal;
+    root.appendChild(modal);
+}
