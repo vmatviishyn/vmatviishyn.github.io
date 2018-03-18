@@ -182,4 +182,4 @@ $(document).on('click', '[data-toggle="lightbox"]', function(event) {
 
     });
 });
-//end lightbox
+//end lightbox.
