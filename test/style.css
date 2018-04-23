@@ -1,0 +1,73 @@
+body {
+    background-color: rgb(194, 194, 194);
+}
+
+.knives {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.knives div {
+    margin: 20px
+}
+
+.french-or-chef {
+    width: 86px;
+    height: 465px;
+    background: url('knives_sprites.png') -145px -10px;
+}
+
+.knives div:hover {
+    filter: brightness(50%) sepia(100) saturate(100) hue-rotate(25deg);
+}
+
+.boning {
+    width: 48px;
+    height: 364px;
+    background: url('knives_sprites.png') -403px -10px;
+}
+
+.filleting {
+    width: 53px;
+    height: 368px;
+    background: url('knives_sprites.png') -251px -507px;
+}
+
+.cleaver {
+    width: 115px;
+    height: 394px;
+    background: url('knives_sprites.png') -10px -10px;
+}
+
+.carving {
+    width: 31px;
+    height: 351px;
+    background: url('knives_sprites.png') -403px -394px;
+}
+
+.fork {
+    width: 41px;
+    height: 412px;
+    background: url('knives_sprites.png') -145px -495px;
+}
+
+.slicing {
+    width: 37px;
+    height: 468px;
+    background: url('knives_sprites.png') -346px -10px;
+}
+
+.scimitar {
+    width: 85px;
+    height: 491px;
+    background: url('knives_sprites.png') -10px -424px;
+}
+
+.butcher {
+    width: 75px;
+    height: 477px;
+    background: url('knives_sprites.png') -251px -10px;
+}
